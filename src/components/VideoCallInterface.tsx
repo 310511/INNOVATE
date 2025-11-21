@@ -49,6 +49,7 @@ const VideoCallInterface: React.FC = () => {
     { id: 2, name: 'J. Chen', image: 'https://randomuser.me/api/portraits/women/44.jpg' },
     { id: 3, name: 'M. Rodriguez', image: 'https://randomuser.me/api/portraits/men/67.jpg' },
     { id: 4, name: 'Dr. K. Lee', image: 'https://randomuser.me/api/portraits/women/65.jpg' },
+    { id: 5, name: 'S. Patel', image: 'https://randomuser.me/api/portraits/men/85.jpg' },
   ];
 
   // Load ElevenLabs script - prevent duplicate loading
