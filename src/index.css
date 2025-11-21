@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keep ElevenLabs widget functional but invisible */
+/* Don't use display: none or it won't work */
