@@ -377,10 +377,10 @@ const VideoCallInterface: React.FC = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
         {/* Main Video */}
-        <div className="lg:col-span-3">
-          <div className="bg-gray-800 rounded-lg overflow-hidden">
+        <div className="lg:col-span-3 flex">
+          <div className="bg-gray-800 rounded-lg overflow-hidden w-full">
             <div className="p-3 border-b border-gray-700">
               <span className="text-xs uppercase tracking-wider">YOUR CAMERA — Live Feed</span>
             </div>
@@ -509,10 +509,10 @@ const VideoCallInterface: React.FC = () => {
         </div>
 
         {/* Judges Panel */}
-        <div className="lg:col-span-1">
-          <div className="bg-gray-800 rounded-lg overflow-hidden">
+        <div className="lg:col-span-1 flex">
+          <div className="bg-gray-800 rounded-lg overflow-hidden w-full">
             <div className="p-3 border-b border-gray-700">
-              <h2 className="text-xs uppercase tracking-wider">AI JUDGES</h2>
+              <span className="text-xs uppercase tracking-wider">AI JUDGES</span>
             </div>
             <div className="p-4">
             <div className="space-y-3">
