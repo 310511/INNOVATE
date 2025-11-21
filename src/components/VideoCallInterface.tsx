@@ -2,6 +2,13 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 
+// Import judge images
+import AnanyaGuptaImg from '../assets/AnanyaGupta.png';
+import PriyaMehtaImg from '../assets/PriyaMehta.png';
+import RajeevKhannaImg from '../assets/RajeevKhanna.png';
+import VikramDesaiImg from '../assets/VikramDesai.png';
+import VineetSharmaImg from '../assets/VineetSharma.png';
+
 // Extend Window interface for ElevenLabs widget
 declare global {
   interface Window {
@@ -43,13 +50,13 @@ const VideoCallInterface: React.FC = () => {
   const elevenLabsWidgetRef = useRef<HTMLElement | null>(null);
   const elevenLabsScriptLoaded = useRef(false);
 
-  // Mock judges
+  // AI Judges with real images
   const judges: Judge[] = [
-    { id: 1, name: 'Dr. A. Sharma', image: 'https://randomuser.me/api/portraits/men/32.jpg' },
-    { id: 2, name: 'J. Chen', image: 'https://randomuser.me/api/portraits/women/44.jpg' },
-    { id: 3, name: 'M. Rodriguez', image: 'https://randomuser.me/api/portraits/men/67.jpg' },
-    { id: 4, name: 'Dr. K. Lee', image: 'https://randomuser.me/api/portraits/women/65.jpg' },
-    { id: 5, name: 'S. Patel', image: 'https://randomuser.me/api/portraits/men/85.jpg' },
+    { id: 1, name: 'Ananya Gupta', image: AnanyaGuptaImg },
+    { id: 2, name: 'Priya Mehta', image: PriyaMehtaImg },
+    { id: 3, name: 'Rajeev Khanna', image: RajeevKhannaImg },
+    { id: 4, name: 'Vikram Desai', image: VikramDesaiImg },
+    { id: 5, name: 'Vineet Sharma', image: VineetSharmaImg },
   ];
 
   // Load ElevenLabs script - prevent duplicate loading
@@ -192,9 +199,9 @@ const VideoCallInterface: React.FC = () => {
       
       // Activate AI Judge visual indicator
       setTimeout(() => {
-        setActiveSpeaker(1); // Dr. A. Sharma
+        setActiveSpeaker(1); // Ananya Gupta
         setIsAIJudgeSpeaking(true);
-        console.log('🤖 AI Judge (Dr. A. Sharma) is now active');
+        console.log('🤖 AI Judge (Ananya Gupta) is now active');
       }, 2000);
     }
   };
@@ -223,7 +230,7 @@ const VideoCallInterface: React.FC = () => {
       audioContextRef.current = audioContext;
       analyserRef.current = analyser;
 
-      // Disable random speaker detection - only AI judge (Dr. A. Sharma) should speak
+      // Disable random speaker detection - only AI judge (Ananya Gupta) should speak
       // The active speaker will be controlled by ElevenLabs audio monitoring
     } catch (err) {
       console.error('Media access error:', err);
@@ -339,7 +346,7 @@ const VideoCallInterface: React.FC = () => {
         });
         
         if (isPlaying) {
-          setActiveSpeaker(1); // Dr. A. Sharma
+          setActiveSpeaker(1); // Ananya Gupta
           setIsAIJudgeSpeaking(true);
         } else if (isAIJudgeSpeaking) {
           setActiveSpeaker(null);
@@ -396,7 +403,7 @@ const VideoCallInterface: React.FC = () => {
                 <p className="text-gray-400 mb-4">Please upload your pitch deck to begin the session</p>
                 <div className="mb-4 p-3 bg-yellow-900/30 border border-yellow-600/50 rounded text-xs max-w-md">
                   <p className="text-yellow-300">
-                    ⚠️ After upload, please <strong>allow microphone access</strong> when prompted by your browser. Dr. A. Sharma (AI Judge) will start speaking automatically.
+                    ⚠️ After upload, please <strong>allow microphone access</strong> when prompted by your browser. Ananya Gupta (AI Judge) will start speaking automatically.
                   </p>
                 </div>
                 <label className="cursor-pointer px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors">
