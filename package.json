@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "node --version | grep -q 'v2[0-9]\\|v22' || (echo '\n⚠️  ERROR: Node.js 20+ required. Current version:' && node --version && echo '\nPlease run: nvm use 20\n' && exit 1)",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
