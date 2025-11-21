@@ -2,13 +2,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 
-// Import judge images
-import AnanyaGuptaImg from '../assets/AnanyaGupta.png';
-import PriyaMehtaImg from '../assets/PriyaMehta.png';
-import RajeevKhannaImg from '../assets/RajeevKhanna.png';
-import VikramDesaiImg from '../assets/VikramDesai.png';
-import VineetSharmaImg from '../assets/VineetSharma.png';
-
 // Extend Window interface for ElevenLabs widget
 declare global {
   interface Window {
@@ -50,13 +43,13 @@ const VideoCallInterface: React.FC = () => {
   const elevenLabsWidgetRef = useRef<HTMLElement | null>(null);
   const elevenLabsScriptLoaded = useRef(false);
 
-  // AI Judges with real images (matches order from Judges page)
+  // AI Judges with images from AI Judges folder (matches order from Judges page)
   const judges: Judge[] = [
-    { id: 1, name: 'Ananya Gupta', image: AnanyaGuptaImg }, // Analyst (AI-Powered)
-    { id: 2, name: 'Rajeev Khanna', image: RajeevKhannaImg }, // Visionary
-    { id: 3, name: 'Priya Mehta', image: PriyaMehtaImg }, // Empath
-    { id: 4, name: 'Vikram Desai', image: VikramDesaiImg }, // Globalist
-    { id: 5, name: 'Vineet Sharma', image: VineetSharmaImg }, // Strategist
+    { id: 1, name: 'Ananya Gupta', image: '/judges/Ananya Gupta.png' }, // Analyst (AI-Powered)
+    { id: 2, name: 'Rajeev Khanna', image: '/judges/Rajeev Khanna.png' }, // Visionary
+    { id: 3, name: 'Priya Mehta', image: '/judges/Priya Mehta.png' }, // Empath
+    { id: 4, name: 'Vikram Desai', image: '/judges/Vikram Desai.png' }, // Globalist
+    { id: 5, name: 'Vineet Sharma', image: '/judges/Vineet Sharma.png' }, // Strategist
   ];
 
   // Load ElevenLabs script - prevent duplicate loading
