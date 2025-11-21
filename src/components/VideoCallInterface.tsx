@@ -50,13 +50,13 @@ const VideoCallInterface: React.FC = () => {
   const elevenLabsWidgetRef = useRef<HTMLElement | null>(null);
   const elevenLabsScriptLoaded = useRef(false);
 
-  // AI Judges with real images
+  // AI Judges with real images (matches order from Judges page)
   const judges: Judge[] = [
-    { id: 1, name: 'Ananya Gupta', image: AnanyaGuptaImg },
-    { id: 2, name: 'Priya Mehta', image: PriyaMehtaImg },
-    { id: 3, name: 'Rajeev Khanna', image: RajeevKhannaImg },
-    { id: 4, name: 'Vikram Desai', image: VikramDesaiImg },
-    { id: 5, name: 'Vineet Sharma', image: VineetSharmaImg },
+    { id: 1, name: 'Ananya Gupta', image: AnanyaGuptaImg }, // Analyst (AI-Powered)
+    { id: 2, name: 'Rajeev Khanna', image: RajeevKhannaImg }, // Visionary
+    { id: 3, name: 'Priya Mehta', image: PriyaMehtaImg }, // Empath
+    { id: 4, name: 'Vikram Desai', image: VikramDesaiImg }, // Globalist
+    { id: 5, name: 'Vineet Sharma', image: VineetSharmaImg }, // Strategist
   ];
 
   // Load ElevenLabs script - prevent duplicate loading
