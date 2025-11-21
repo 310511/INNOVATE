@@ -43,13 +43,13 @@ const VideoCallInterface: React.FC = () => {
   const elevenLabsWidgetRef = useRef<HTMLElement | null>(null);
   const elevenLabsScriptLoaded = useRef(false);
 
-  // AI Judges with images from AI Judges folder (matches order from Judges page)
+  // AI Judges in presentation order
   const judges: Judge[] = [
-    { id: 1, name: 'Ananya Gupta', image: '/judges/Ananya Gupta.png' }, // Analyst (AI-Powered)
-    { id: 2, name: 'Rajeev Khanna', image: '/judges/Rajeev Khanna.png' }, // Visionary
-    { id: 3, name: 'Priya Mehta', image: '/judges/Priya Mehta.png' }, // Empath
-    { id: 4, name: 'Vikram Desai', image: '/judges/Vikram Desai.png' }, // Globalist
-    { id: 5, name: 'Vineet Sharma', image: '/judges/Vineet Sharma.png' }, // Strategist
+    { id: 1, name: 'Rajeev Khanna', image: '/judges/Rajeev Khanna.png' }, // Visionary
+    { id: 2, name: 'Ananya Gupta', image: '/judges/Ananya Gupta.png' }, // Analyst (AI-Powered)
+    { id: 3, name: 'Vineet Sharma', image: '/judges/Vineet Sharma.png' }, // Strategist
+    { id: 4, name: 'Priya Mehta', image: '/judges/Priya Mehta.png' }, // Empath
+    { id: 5, name: 'Vikram Desai', image: '/judges/Vikram Desai.png' }, // Globalist
   ];
 
   // Load ElevenLabs script - prevent duplicate loading
