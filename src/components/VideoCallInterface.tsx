@@ -380,13 +380,13 @@ const VideoCallInterface: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
         {/* Main Video */}
         <div className="lg:col-span-3 flex">
-          <div className="bg-gray-800 rounded-lg overflow-hidden w-full">
-            <div className="p-3 border-b border-gray-700">
+          <div className="bg-gray-800/95 rounded-lg overflow-hidden w-full border border-gray-700/50">
+            <div className="p-3 bg-gray-800/90">
               <span className="text-xs uppercase tracking-wider">YOUR CAMERA — Live Feed</span>
             </div>
             
             {!isDocumentUploaded ? (
-              <div className="h-96 flex flex-col items-center justify-center bg-gray-700">
+              <div className="h-96 flex flex-col items-center justify-center bg-gray-750">
                 <div className="mb-4 p-4 bg-blue-600 rounded-full">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
@@ -510,8 +510,8 @@ const VideoCallInterface: React.FC = () => {
 
         {/* Judges Panel */}
         <div className="lg:col-span-1 flex">
-          <div className="bg-gray-800 rounded-lg overflow-hidden w-full">
-            <div className="p-3 border-b border-gray-700">
+          <div className="bg-gray-800/95 rounded-lg overflow-hidden w-full border border-gray-700/50">
+            <div className="p-3 bg-gray-800/90">
               <span className="text-xs uppercase tracking-wider">AI JUDGES</span>
             </div>
             <div className="p-4">
@@ -521,8 +521,8 @@ const VideoCallInterface: React.FC = () => {
                   key={judge.id}
                   className={`flex items-center gap-3 p-3 rounded-lg transition-all ${
                     activeSpeaker === judge.id
-                      ? 'border-2 border-blue-400 bg-blue-900/20'
-                      : 'bg-gray-700 hover:bg-gray-600'
+                      ? 'border-2 border-blue-400 bg-blue-900/30'
+                      : 'bg-gray-700/80 hover:bg-gray-600/90'
                   }`}
                 >
                   <div className="relative">
